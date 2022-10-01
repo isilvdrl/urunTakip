@@ -1,0 +1,21 @@
+﻿@model urunTakip.Models.Entity.tblUrunler
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("UrunGuncelle", "Urun", FormMethod.Post))
+{
+    <h2> Urun Güncelleme</h2>
+    <br />
+    @Html.HiddenFor(x => x.id, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ad, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.marka, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.stok, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.alisfiyat, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.satisfiyat, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.kategori, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+}

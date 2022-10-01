@@ -1,0 +1,32 @@
+﻿@model urunTakip.Models.Entity.tblMusteri
+@{
+    ViewBag.Title = "YeniMusteri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form method="post">
+    <h2>Yeni Müşteri Ekleme</h2>
+    <br />
+    <label>Müşteri Adını Giriniz...</label>
+    <input type="text" class="form-control" name="ad" placeholder="musteri adı" />
+    @Html.ValidationMessageFor(x => x.ad, "", new { @style = "color:red" })
+    <br />
+
+    <br />
+    <label>Müşteri Soyadını Giriniz...</label>
+    <input type="text" class="form-control" name="soyad" placeholder="musteri soyad" />
+    @Html.ValidationMessageFor(x => x.soyad, "", new { @style = "color:red" })
+    <br />
+
+    <br />
+    <label>Müşteri Şehir Bilgisini Giriniz...</label>
+    <input type="text" class="form-control" name="sehir" placeholder="musteri sehir" />
+    <br />
+
+    <br />
+    <label>Müşteri Bakiye Giriniz...</label>
+    <input type="text" class="form-control" name="bakiye" placeholder="musteri bakiye" />
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+
+</form>
